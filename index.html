@@ -1,68 +1,192 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4323738562398342"
-     crossorigin="anonymous"></script>
-		<title>Fajar Zikri Utama</title>
-		<link rel="shortcut icon" type="image/jpg" href="/icon.jpg"/>
-		<meta name="title" content="Fajar Zikri Utama">
-        <meta name="description" content="Fajar Zikri Utama's personal website.">
-        <meta name="keywords" content="fajar, zikri, utama, fajar zikri, fajar zikri utama">
-        <meta name="robots" content="index, follow">
-		<meta name="author" content="Fajar Zikri Utama">
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1TNGMF3WQ2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fajar's Profile</title>
+  </head>
+  <body class="bg-gradient-to-br from-pink-500 to-blue-500">
+    <div class="flex flex-col items-center justify-center min-h-screen">
+      <div
+        class="max-w-xs md:max-w-md p-8 bg-white shadow-xl rounded-2xl opacity-0 transition-opacity duration-1000"
+      >
+        <div class="flex flex-col items-center">
+          <img
+            src="profile.png"
+            alt="Fajar's Profile Picture"
+            id="profilePicture"
+            class="w-32 h-32 rounded-full mb-4 transform scale-0 transition-transform duration-1000"
+          />
+          <h1
+            id="name"
+            class="text-center text-2xl font-bold opacity-0 transition-opacity duration-1000"
+          ></h1>
+          <p
+            id="description"
+            class="text-sm text-gray-700 text-center my-2 opacity-0 transition-opacity duration-1000"
+          ></p>
+        </div>
+        <div class="my-1">
+          <!-- Social Icons -->
+          <ul
+            id="socialIcons"
+            class="flex justify-center space-x-4 transform scale-0 transition-transform duration-1000"
+          >
+            <li
+              class="transition-all duration-300 hover:text-blue-600 hover:scale-125"
+            >
+              <a
+                href="https://www.facebook.com/FajarZikri"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-500 text-3xl"
+              >
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li
+              class="transition-all duration-300 hover:text-pink-600 hover:scale-125"
+            >
+              <a
+                href="https://www.instagram.com/fajarzikriutama"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-pink-500 text-3xl"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+            <li
+              class="transition-all duration-300 hover:text-gray-700 hover:scale-125"
+            >
+              <a
+                href="https://www.tiktok.com/@fajarzikriutama"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-black text-3xl"
+              >
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </li>
+            <li
+              class="transition-all duration-300 hover:text-blue-700 hover:scale-125"
+            >
+              <a
+                href="https://www.linkedin.com/in/fajarzikriutama"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-blue-600 text-3xl"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-  gtag('config', 'G-1TNGMF3WQ2');
-</script>
-	</head>
-	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+        <!-- Some links -->
+        <div
+          id="someLinks"
+          class="mt-4 opacity-0 transition-opacity duration-1000"
+        >
+          <div class="flex flex-col space-y-2">
+            <a
+              href="https://blog.fajarzikri.my.id"
+              target="_blank"
+              class="flex items-center justify-center bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-md transition-colors duration-300"
+            >
+              <span class="mr-2">
+                <i class="fas fa-blog"></i>
+                <!-- Changed to blog icon -->
+              </span>
+              My Blog
+            </a>
+            <a
+              href="https://english.fajarzikri.my.id"
+              target="_blank"
+              class="flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md transition-colors duration-300"
+            >
+              <span class="mr-2">
+                <i class="fas fa-book"></i>
+                <!-- Changed to book icon -->
+              </span>
+              My English Lessons
+            </a>
+            <a
+              href="https://ai.fajarzikri.my.id"
+              target="_blank"
+              class="flex items-center justify-center bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md transition-colors duration-300"
+            >
+              <span class="mr-2">
+                <i class="fas fa-robot"></i>
+                <!-- Changed to robot icon -->
+              </span>
+              AI In Education
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Fajar Zikri Utama, S.Pd.</h1>
-						<p>Teacher &nbsp;&bull;&nbsp; Learner &nbsp;&bull;&nbsp; Content Creator</p>
-						<nav>
-							<ul>
-								<li><a href="https://www.facebook.com/FajarZikri" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.instagram.com/inggrisotodidak/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://blog.fajarzikri.my.id/" target="_blank" class="icon brands fa-blogger"><span class="label">Personal Blog</span></a></li>
-								<li><a href="https://english.fajarzikri.my.id/" target="_blank" class="icon brands fa-blogger"><span class="label">Fajar's English Lessons</span></a></li>
-								<li><a href="mailto:fajarutama30@guru.smp.belajar.id" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
+    <!-- Import Font Awesome for social media icons -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
-				<!-- Credit 
-					<footer id="footer">
-						<span class="copyright">Design by <a href="http://html5up.net" target="_blank">HTML5 UP</a>.</span>
-					</footer>
-				-->
+    <!-- Typewriter effect -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const profileElement = document.querySelector(".bg-white");
+        profileElement.classList.add("opacity-100");
 
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+        const nameElement = document.getElementById("name");
+        const descriptionElement = document.getElementById("description");
+
+        setTimeout(function () {
+          nameElement.classList.add("opacity-100");
+          const typedName = new Typed(nameElement, {
+            strings: ["Fajar Zikri Utama"],
+            typeSpeed: 40,
+            showCursor: false,
+          });
+        }, 1000);
+
+        setTimeout(function () {
+          descriptionElement.classList.add("opacity-100");
+          const typedDescription = new Typed(descriptionElement, {
+            strings: ["An English teacher who's passionate about technology."],
+            typeSpeed: 25,
+            showCursor: false,
+          });
+        }, 2000);
+      });
+    </script>
+
+    <!-- Pop out effect-->
+    <script>
+      window.addEventListener("load", function () {
+        document.getElementById("profilePicture").classList.remove("scale-0");
+        document.getElementById("profilePicture").classList.add("scale-100");
+      });
+
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.getElementById("socialIcons").classList.remove("scale-0");
+          document.getElementById("socialIcons").classList.add("scale-100");
+        }, 3800); // 3.8 seconds delay
+      });
+
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          document.getElementById("someLinks").classList.add("opacity-100");
+          document.getElementById("someLinks").classList.remove("opacity-0");
+        }, 4500); // 3.8 seconds delay
+      });
+    </script>
+	  <!-- Made by Fajar Zikri Utama -->
+  </body>
 </html>
