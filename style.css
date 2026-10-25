@@ -53,7 +53,7 @@ a[aria-disabled="true"] { cursor: default; }
   #identity > .profile-shell {
     display: grid;
     grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
-    grid-template-rows: minmax(min-content, 1fr) auto;
+    grid-template-rows: minmax(min-content, 1fr);
     min-height: calc(100svh - 48px);
     column-gap: clamp(36px, 5vw, 80px);
     row-gap: 12px;
@@ -73,7 +73,6 @@ a[aria-disabled="true"] { cursor: default; }
   #links > a > div:first-child > div:first-child { width: 42px; height: 42px; }
   .section-anchor { display: none; }
   .links-panel > .placeholder-note { margin: 12px 0 0; }
-  .profile-shell > .profile-footer { grid-column: 1 / -1; grid-row: 2; margin-top: 12px; padding-top: 12px; }
 }
 
 /* Laptop dengan area tampilan lebih pendek: rapatkan jarak, tetap tampilkan semua kartu. */
@@ -85,7 +84,6 @@ a[aria-disabled="true"] { cursor: default; }
   .profile-intro .profile-avatar { width: 152px; height: 152px; }
   .profile-intro h1 { font-size: 28px; }
   .profile-intro > p { margin-bottom: 16px; }
-  .profile-shell > .profile-footer { margin-top: 0; padding-top: 4px; }
 }
 
 /* Ikon merek sosial lokal, mengikuti warna tema dan status hover. */
@@ -114,6 +112,7 @@ a[aria-disabled="true"] { cursor: default; }
     gap: clamp(10px, 2svh, 18px);
   }
   .profile-shell > .profile-intro { margin-top: auto; min-width: 0; }
+  .profile-shell > .links-panel { margin-bottom: auto; }
   .profile-intro > .absolute { right: 0; max-width: 100%; }
   .profile-intro .profile-photo { margin-bottom: clamp(8px, 1.5svh, 12px); }
   .profile-intro .profile-avatar {
@@ -129,7 +128,6 @@ a[aria-disabled="true"] { cursor: default; }
   #links > a > div:first-child { gap: 12px; }
   #links > a > div:first-child > div:first-child { width: 40px; height: 40px; }
   #links .menu-title { font-size: clamp(16px, 2.5svh, 20px); overflow-wrap: break-word; }
-  .profile-shell > .profile-footer { margin-top: auto; padding-top: 0; flex-shrink: 0; }
 }
 
 /* Layar pendek: rapatkan isi, tanpa memotong tautan atau mengunci scroll saat zoom. */
