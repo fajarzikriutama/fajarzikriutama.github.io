@@ -137,3 +137,29 @@ a[aria-disabled="true"] { cursor: default; }
   #links > a { min-height: 50px; padding: 7px 10px; }
   #links > a > div:first-child > div:first-child { width: 36px; height: 36px; }
 }
+
+/* Tampilan yang disetujui dari preview lokal. */
+:root { color-scheme: dark; }
+/* Foto tanpa bayangan atau cahaya latar. */
+.profile-intro .profile-avatar { box-shadow: none; filter: none; }
+.destination-icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.icon-article { color: #f5bc7e; }
+.icon-menu_book { color: #acd6bb; }
+.icon-school { color: #b3c8ef; }
+#links > a { border: 1px solid #ffffff08; transition: transform .22s ease, background-color .22s ease, box-shadow .22s ease, border-color .22s ease; }
+@media (hover: hover) {
+  #links > a:hover { transform: translateY(-3px); border-color: #f5bc7e55; box-shadow: 0 10px 30px #00000025; }
+  .social-shortcut:hover { transform: translateY(-3px); box-shadow: 0 5px 16px #00000025; }
+}
+#links > a:active, .social-shortcut:active { transform: scale(.97); }
+.social-shortcut { transition: transform .2s ease, color .2s ease, background-color .2s ease; }
+@keyframes arrive { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.profile-intro { animation: arrive .65s ease-out both; }
+#links > a { animation: arrive .55s ease-out backwards; }
+#links > a:nth-child(1) { animation-delay: .12s; }
+#links > a:nth-child(2) { animation-delay: .20s; }
+#links > a:nth-child(3) { animation-delay: .28s; }
+@media (prefers-reduced-motion: reduce) {
+  .profile-intro, #links > a { animation: none; }
+  #links > a, .social-shortcut { transition: none; }
+}
