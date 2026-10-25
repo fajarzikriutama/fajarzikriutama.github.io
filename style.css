@@ -97,3 +97,45 @@ a[aria-disabled="true"] { cursor: default; }
   word-spacing: 0.14em;
   line-height: 1.4;
 }
+
+/* Ponsel: susun seluruh isi dalam tinggi layar, termasuk area aman perangkat. */
+@media (max-width: 1023px) {
+  html, body { width: 100%; max-width: 100%; }
+  #identity {
+    min-height: 100svh;
+    padding: max(12px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+    overflow-x: clip;
+  }
+  #identity > .profile-shell {
+    max-width: 480px;
+    min-width: 0;
+    min-height: calc(100svh - max(12px, env(safe-area-inset-top)) - max(12px, env(safe-area-inset-bottom)));
+    padding: 0;
+    gap: clamp(10px, 2svh, 18px);
+  }
+  .profile-shell > .profile-intro { margin-top: auto; min-width: 0; }
+  .profile-intro > .absolute { right: 0; max-width: 100%; }
+  .profile-intro .profile-photo { margin-bottom: clamp(8px, 1.5svh, 12px); }
+  .profile-intro .profile-avatar {
+    width: clamp(104px, 18svh, 144px);
+    height: clamp(104px, 18svh, 144px);
+  }
+  .profile-intro .profile-name { font-size: clamp(18px, 3svh, 22px); line-height: 1.35; min-width: 0; }
+  .profile-intro > .inline-flex { margin-bottom: clamp(8px, 1.5svh, 12px); }
+  .profile-intro > p { font-size: clamp(12px, 1.8svh, 14px); line-height: 1.5; margin-bottom: clamp(10px, 2svh, 16px); }
+  .profile-intro > div[aria-label="Media sosial"] { margin-bottom: 0; }
+  #links { gap: clamp(8px, 1.5svh, 12px); }
+  #links > a { min-width: 0; min-height: 56px; padding: clamp(8px, 1.5svh, 12px); }
+  #links > a > div:first-child { gap: 12px; }
+  #links > a > div:first-child > div:first-child { width: 40px; height: 40px; }
+  #links .menu-title { font-size: clamp(16px, 2.5svh, 20px); overflow-wrap: break-word; }
+  .profile-shell > .profile-footer { margin-top: auto; padding-top: 0; flex-shrink: 0; }
+}
+
+/* Layar pendek: rapatkan isi, tanpa memotong tautan atau mengunci scroll saat zoom. */
+@media (max-width: 1023px) and (max-height: 620px) {
+  #identity { padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: max(8px, env(safe-area-inset-bottom)); }
+  #identity > .profile-shell { min-height: calc(100svh - max(8px, env(safe-area-inset-top)) - max(8px, env(safe-area-inset-bottom))); gap: 10px; }
+  #links > a { min-height: 50px; padding: 7px 10px; }
+  #links > a > div:first-child > div:first-child { width: 36px; height: 36px; }
+}
